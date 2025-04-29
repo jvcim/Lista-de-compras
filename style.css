@@ -1,0 +1,195 @@
+:root {
+  /* Tipografia conforme projeto no Figma */
+  --font-family-base: 'Inter', sans-serif;
+  --font-title: 24px;
+  --font-label: 16px;
+  --font-paragraph: 16px;
+  --font-link: 14px;
+
+  --line-title: 32px;
+  --line-label: 20px;
+  --line-paragraph: 20px;
+  --line-link: 16px;
+
+  --weight-bold: 700;
+  --weight-semibold: 600;
+  --weight-medium: 500;
+
+  /* Cores conforme projeto no Figma */
+  --background-primary: #F4F5FB;
+  --background-secondary: #FFFFFF;
+
+  --color-brand: #CA3884;
+  --color-brand-hover: #A52C6B;
+  --color-danger: #C93847;
+
+  --content-primary: #080B12;
+  --content-secondary: #374151;
+  --content-tertiary: #9CA3AF;
+  --always-white: #FFFFFF;
+
+  --border-primary: #D1D5DB;
+  --border-hover: #B9C2D0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-paragraph);
+  line-height: var(--line-paragraph);
+  font-weight: var(--weight-medium);
+  background-color: var(--background-primary);
+  color: var(--content-primary);
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-brand);
+  font-size: var(--font-link);
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-primary);
+  background-color: var(--background-secondary);
+  color: var(--content-primary);
+}
+
+button[type="submit"] {
+  background-color: var(--color-brand);
+  color: var(--always-white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: var(--weight-semibold);
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-brand-hover);
+}
+
+/* Lista */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+li span {
+  flex: 1;
+  color: var(--content-primary);
+}
+
+li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Alerta */
+.alerta-remocao {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  background-color: var(--color-danger);
+  color: var(--always-white);
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.alerta-remocao p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.alerta-remocao img {
+  width: 20px;
+  height: 20px;
+}
+
+.alerta-remocao button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--always-white);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Animações apenas para fins acadêmicos - Não fazia parte do desafio */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+/* Classes para animações */
+.mostrar-alerta {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+  animation: fadeInUp 0.5s forwards;
+}
+
+.esconder-alerta {
+  animation: fadeOutRight 0.5s forwards;
+}

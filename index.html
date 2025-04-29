@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quicklist</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <img src="/Icons/logo.svg" alt="Logo quicklist">
+  </header>
+
+  <a href="#" class="voltar">
+    <img src="/Icons/link button.svg" alt="Seta de Voltar">
+  </a>
+
+  <main>
+    <h1>Compras da semana</h1>
+    <form id="form-item">
+      <input type="text" id="input-item" placeholder="Adicione um item. Ex: Arroz" required>
+      <button type="submit">Adicionar item</button>
+    </form>
+    
+    <ul id="lista-compras">
+      <!-- Itens da lista serão inseridos aqui -->
+    </ul>
+
+    <div class="alerta-remocao" role="alert">
+      <p>
+        <img src="/Icons/warning-circle-filled.svg" alt="Ícone de alerta">
+        O item foi removido da lista
+      </p>
+      <button class="fechar-alerta" aria-label="Fechar alerta">
+        <img src="/Icons/delete-small.svg" alt="Fechar alerta">
+      </button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

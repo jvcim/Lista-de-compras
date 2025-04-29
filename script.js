@@ -24,7 +24,7 @@ form.addEventListener('submit', function(event) {
 
     checkbox.type = 'checkbox';
     span.textContent = texto;
-    iconeLixeira.src = '/Icons/Trash.svg';
+    iconeLixeira.src = 'Icons/Trash.svg';
     iconeLixeira.alt = 'Ícone de lixeira';
 
     botao.appendChild(iconeLixeira);

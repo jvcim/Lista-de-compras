@@ -27,4 +27,4 @@ Projeto web desenvolvido para facilitar a organização de compras semanais, com
 
 1. Clone ou baixe este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/quicklist.git
+   git clone https://github.com/jvcim/Lista-de-compras
